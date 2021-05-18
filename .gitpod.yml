@@ -1,0 +1,15 @@
+ports:
+  - port: 4200
+    onOpen: open-preview
+
+image: gitpod/workspace-full
+
+tasks:
+  - init: yarn install
+    command: >
+      yarn start
+
+github:
+  prebuilds:
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: true
